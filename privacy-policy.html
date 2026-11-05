@@ -69,7 +69,7 @@
 
 <section class="summary">
   <h2>Summary</h2>
-  <p class="in-short"><strong>In short:</strong> Runtide has no accounts and no servers of ours. Your health data is processed on your iPhone and we never receive it. It keeps your settings and plan setups in your own iCloud. If you turn on the optional weather lookup, an approximate location goes to a weather service. We only receive what you choose to send us.</p>
+  <p class="in-short"><strong>In short:</strong> Runtide has no accounts and no servers of ours. Your health data is processed on your iPhone, and we receive it only if you choose to send us a report about a run. It keeps your settings and plan setups in your own iCloud. If you turn on the optional weather lookup, an approximate location goes to a weather service. We only receive what you choose to send us.</p>
 </section>
 
 <nav aria-label="Contents">
@@ -80,8 +80,8 @@
     <li><a href="#icloud">3. What's in your iCloud</a></li>
     <li><a href="#leaves">4. What leaves your iPhone</a></li>
     <li><a href="#receive">5. What we receive</a></li>
-    <li><a href="#apple">6. Apple Watch and writing to Health</a></li>
-    <li><a href="#backup">7. Backup files and diagnostics</a></li>
+    <li><a href="#apple">6. Apple Watch, notifications and writing to Health</a></li>
+    <li><a href="#backup">7. Backup files, run reports and diagnostics</a></li>
     <li><a href="#not">8. What Runtide does not do</a></li>
     <li><a href="#bases">9. Our legal bases</a></li>
     <li><a href="#keep">10. How long information is kept</a></li>
@@ -105,13 +105,15 @@
     <li>VO₂ max and workout effort</li>
   </ul>
   <p>It uses them to analyse your runs, track your training load and recovery, and build training plans from your own history.</p>
-  <p><strong>This is health information, which privacy law treats as sensitive.</strong> Runtide processes it on your iPhone, and we never receive it.</p>
+  <p><strong>This is health information, which privacy law treats as sensitive.</strong> Runtide processes it on your iPhone, and we receive it only if you choose to send us a report about a run (section 7).</p>
   <p>You choose what Runtide can read, and you can change it at any time in the Settings app: Health &gt; Data Access &amp; Devices &gt; Runtide.</p>
+  <h3>Runs read in the background</h3>
+  <p>Once you've given access, Apple Health wakes Runtide when a workout is added, so a run you've just finished is in your plan, your widgets and your Apple Watch's next days without opening the app. Runtide reads only the newest workouts then, on your iPhone, and never while it's locked (Apple Health doesn't allow it). Nothing is sent anywhere, and your plan doesn't change: anything a run would change still waits for you to choose it in the app.</p>
 </section>
 
 <section id="lives">
   <h2>2. Where it lives</h2>
-  <p>Your health data stays on your iPhone. What Runtide works out from your workouts (your training history, your plans and your settings) is stored in the app's own storage on the phone, protected by your passcode.</p>
+  <p>Your health data stays on your iPhone, unless you choose to send a report about a run (section 7). What Runtide works out from your workouts (your training history, your plans and your settings) is stored in the app's own storage on the phone, protected by your passcode.</p>
   <p>If you add a Runtide widget, it shows your planned session on your Home Screen or Lock Screen, where anyone holding the phone can see it. To make that work, Runtide keeps a small file with your planned sessions' days, names, lengths and kinds that stays readable while the phone is locked, once you've unlocked it after a restart. It stays on your iPhone, isn't in device backups, and goes when you delete Runtide's data.</p>
   <p>Device backups (iCloud Backup or a backup to a computer) are separate from Runtide's own iCloud sync below. Your training history, plans, availability, off-plan answers, session feedback, weather results and crash reports are left out of device backups; Runtide reads your runs from Health again on a new phone, and each plan's setup reaches it through iCloud as described below. Your settings, heart-rate numbers and zones included, are part of device backups like other app data.</p>
 </section>
@@ -145,6 +147,7 @@
   <p>We have no access to the information on your iPhone or in your iCloud. We receive personal information only when:</p>
   <ul>
     <li><strong>You contact us.</strong> If you email us or use Send Feedback, we receive your email address and whatever you write or attach. We use it to answer you and to improve Runtide.</li>
+    <li><strong>You report a problem with a run.</strong> If you send us a report from Report a Problem with This Run (section 7), we receive your email address, what you write and the file, which holds health and fitness information about that one run. We use it only to fix that problem.</li>
     <li><strong>You send us diagnostics.</strong> If you share a file from Share Diagnostics with us (section 7), we receive its crash and performance reports.</li>
     <li><strong>You agreed to share with app developers.</strong> If you turned on sharing with app developers in your iPhone's settings, Apple gives us crash reports and summarised usage figures for Runtide. You can turn this off in Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements.</li>
   </ul>
@@ -152,15 +155,17 @@
 </section>
 
 <section id="apple">
-  <h2>6. Apple Watch and writing to Health</h2>
+  <h2>6. Apple Watch, notifications and writing to Health</h2>
   <p>If you turn on Upcoming Workouts (Runtide &gt; Settings &gt; Apple Watch), Runtide puts your planned runs for the next 7 days in the Workout app on your watch, through Apple's WorkoutKit. This happens between your own devices.</p>
+  <p>If you allow notifications, Runtide sends one local notification after a run: that your race result is ready to look at, that the run wasn't what the plan had, or that the run is ready to review. They're made on your iPhone; there's no push service and nothing about them leaves the phone. They never show anything about the run itself (no pace, heart rate or distance), so nothing about your health appears on the Lock Screen. There are no reminders. Turn them off in Runtide &gt; Settings &gt; Notifications or in the Settings app &gt; Notifications &gt; Runtide.</p>
   <p>Runtide saves to Health only when you ask it to merge two workouts into one. The merged workout keeps their route, heart rate, distance and other samples.</p>
 </section>
 
 <section id="backup">
-  <h2>7. Backup files and diagnostics</h2>
+  <h2>7. Backup files, run reports and diagnostics</h2>
   <p>Settings &gt; Backup &amp; iCloud &gt; Back Up My Data makes one file, only when you ask, and saves it where you choose in the Files picker. It holds your settings including heart-rate zones, your plans with the run summaries your current plans were built from, availability including illness and injury, and session feedback. It doesn't hold your Health data or the training history Runtide reads from it. Treat the file like any personal file: anyone who has it can read it. Restore from Backup replaces what's on your iPhone with it. If you use iCloud, the restored plan setups then sync to your other iPhones; plans in iCloud that aren't in the file aren't deleted from your other iPhones.</p>
-  <p>The App Store version of Runtide can't export your workouts to files. If you choose Share Diagnostics in Settings &gt; About, Runtide makes a file of its crash and performance reports (no Health data) and you decide where to send it.</p>
+  <p>If a run looks wrong, you can choose Report a Problem with This Run on its screen. Runtide makes a file about that one run and opens an email to us, or the share sheet if you don't use Mail, and nothing is sent until you tap Send. The file holds how Runtide read the run and the session it matched; the run's heart rate, pace, cadence, power and height changes, second by second; its laps, steps and pauses; the day you ran it and your UTC offset; your heart rate zones; the app that recorded it and your device's model; and the app's version. It leaves out your route and where you ran, your name and your device's name, the time of day, the weather, your sleep and your other health readings. Your email address goes with it. The report arrives in our inbox, is used only to fix that problem and is deleted once it's fixed.</p>
+  <p>Otherwise, the App Store version of Runtide can't export your workouts to files. If you choose Share Diagnostics in Settings &gt; About, Runtide makes a file of its crash and performance reports (no Health data) and you decide where to send it.</p>
 </section>
 
 <section id="not">
@@ -171,7 +176,7 @@
     <li>No third-party code (SDKs) inside the app.</li>
     <li>No selling of your data, and no sharing of it for advertising.</li>
   </ul>
-  <p>We may transfer what we hold (section 5) as part of a merger, sale of company assets, financing or acquisition, and we may disclose it where the law requires. We have no health data of yours to transfer or disclose.</p>
+  <p>We may transfer what we hold (section 5) as part of a merger, sale of company assets, financing or acquisition, and we may disclose it where the law requires. The only health data of yours we can hold is a run report you sent us (section 7).</p>
   <p>Runtide's plans and analysis are worked out automatically on your iPhone. They are training suggestions and have no legal or similarly significant effect on you.</p>
 </section>
 
@@ -179,7 +184,7 @@
   <h2>9. Our legal bases</h2>
   <p>If you are in the EU, EEA or UK, these are the legal bases for processing your personal information:</p>
   <ul>
-    <li><strong>Consent</strong>, including explicit consent for health data: Runtide reading Apple Health once you allow it, and the weather lookup. Change the permissions or turn the lookup off at any time. Withdrawing consent doesn't affect what happened before it.</li>
+    <li><strong>Consent</strong>, including explicit consent for health data: Runtide reading Apple Health once you allow it, the weather lookup, and a report about a run, which you choose to send each time. Change the permissions or turn the lookup off at any time. Withdrawing consent doesn't affect what happened before it.</li>
     <li><strong>Legitimate interests:</strong> answering your messages, and fixing and improving Runtide from reports you or Apple send us.</li>
     <li><strong>Legal obligations:</strong> where the law requires us to keep or disclose information.</li>
     <li><strong>Vital interests:</strong> in the rare case it's needed to protect someone's life.</li>
@@ -190,12 +195,12 @@
 <section id="keep">
   <h2>10. How long information is kept</h2>
   <p>What's on your iPhone stays until you delete it (section 11). Crash and performance reports on the phone are limited to the 10 newest of the last 30 days.</p>
-  <p>We keep your messages and anything sent with them only as long as needed to deal with them and improve Runtide, unless the law requires longer. Then we delete or anonymise them.</p>
+  <p>We keep your messages and anything sent with them only as long as needed to deal with them and improve Runtide, unless the law requires longer. Then we delete or anonymise them. A report about a run is deleted once its problem is fixed.</p>
 </section>
 
 <section id="delete">
   <h2>11. Deleting your data</h2>
-  <p>In Runtide, Settings &gt; Delete Runtide Data deletes everything it stored on your iPhone (plans, training history, feedback, settings, weather results and crash reports) and removes its upcoming workouts from your Apple Watch. It also removes your settings and plan setups from iCloud, and those plans from your other iPhones. A backup file you saved stays where you saved it; delete it there.</p>
+  <p>In Runtide, Settings &gt; Delete Runtide Data deletes everything it stored on your iPhone (plans, training history, feedback, settings, weather results and crash reports) and removes its upcoming workouts from your Apple Watch and its notifications; Apple Health stops waking it until you set it up again. It also removes your settings and plan setups from iCloud, and those plans from your other iPhones. A backup file you saved stays where you saved it; delete it there.</p>
   <p>Deleting Runtide from your iPhone also removes everything it stored on the phone, but not what it keeps in your iCloud: your settings and plan setups stay there and come back if you install Runtide again. To remove them from iCloud, use Delete Runtide Data (before deleting the app, or after installing it again). Turning iCloud off for Runtide (Settings &gt; [your name] &gt; iCloud) stops the sync but doesn't delete what's already in iCloud.</p>
   <p>Your Health data stays in Health, where you manage it yourself; Runtide only saved to it the workouts you merged.</p>
   <p>To have us delete what you've sent us, email us (section 17).</p>
@@ -216,7 +221,7 @@
 <section id="us">
   <h2>13. United States residents</h2>
   <p>Some US states give you the right to know what personal information a business holds about you, to access, correct and delete it, to get a copy, and to opt out of its sale, targeted advertising and certain profiling. You can use these rights by emailing us (section 17), or through someone you've authorised. If we refuse a request, you can appeal by replying to us. We won't treat you differently for using them.</p>
-  <p>We do not sell personal information or share it for targeted advertising, and we have not done so in the past 12 months. Health information and precise location stay on your iPhone and we don't receive them. The categories we may receive are in section 5: identifiers (your email address) and what you send us. The approximate location in section 4 goes to Open-Meteo for the weather you asked for, and only when the lookup is on.</p>
+  <p>We do not sell personal information or share it for targeted advertising, and we have not done so in the past 12 months. Precise location stays on your iPhone and we don't receive it. Health information stays there too, unless you choose to send us a report about a run. The categories we may receive are in section 5: identifiers (your email address), the health information in a run report, and what you send us. The approximate location in section 4 goes to Open-Meteo for the weather you asked for, and only when the lookup is on.</p>
   <p>Runtide doesn't respond to Do-Not-Track signals, because it doesn't track you and no standard for them has been finalised.</p>
 </section>
 
