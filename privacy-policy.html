@@ -61,7 +61,7 @@
 <header>
   <div class="wrap">
     <h1>PRIVACY POLICY</h1>
-    <p>Last updated November 05, 2026</p>
+    <p>Last updated November 07, 2026</p>
   </div>
 </header>
 <main>
@@ -69,7 +69,7 @@
 
 <section class="summary">
   <h2>Summary</h2>
-  <p class="in-short"><strong>In short:</strong> Runtide has no accounts and no servers of ours. Your health data is processed on your iPhone, and we receive it only if you choose to send us a report about a run. It keeps your settings and plan setups in your own iCloud. If you turn on the optional weather lookup, an approximate location goes to a weather service. We only receive what you choose to send us.</p>
+  <p class="in-short"><strong>In short:</strong> Runtide has no accounts and no servers of ours. Your health data is processed on your iPhone, and we receive it only if you choose to send us a report about a run. It keeps your settings and plan setups in your own iCloud. If you turn on the optional weather lookup, an approximate location goes to a weather service. If you connect Strava, the runs you upload go to your Strava account. We only receive what you choose to send us.</p>
 </section>
 
 <nav aria-label="Contents">
@@ -132,14 +132,16 @@
 
 <section id="leaves">
   <h2>4. What leaves your iPhone</h2>
-  <p>Apart from your own iCloud (above) and anything you choose to send (sections 5 and 7), only the weather lookup. It is <strong>off until you turn it on</strong>, when you first open Runtide or later in Settings &gt; "Look Up Weather". Nothing is sent while it is off.</p>
+  <p>Apart from your own iCloud (above), anything you choose to send (sections 5 and 7) and the runs you upload to Strava (below), only the weather lookup. It is <strong>off until you turn it on</strong>, when you first open Runtide or later in Settings &gt; "Look Up Weather". Nothing is sent while it is off.</p>
   <p>With it on, Runtide asks Open-Meteo (<a href="https://open-meteo.com" target="_blank" rel="noopener">open-meteo.com</a>), a weather service, for the temperature and conditions of an outdoor run saved without weather, the wind and "feels like" temperature of outdoor runs, and the forecast for your planned sessions. To do that it sends:</p>
   <ul>
     <li>where a run started, rounded to about 1 km (for the forecast, where your most recent outdoor run started)</li>
     <li>the date of the run or forecast</li>
   </ul>
   <p>It sends no name, account, device identifier or Health values. As with any internet request, Open-Meteo can see your device's IP address. That is how the request reaches it, and we don't receive it.</p>
-  <p>Open-Meteo, Apple and, if you email us, our email provider (Google) handle information under their own terms, and may do so outside your country.</p>
+  <h3>Strava</h3>
+  <p>Nothing goes to Strava unless you connect it in Runtide &gt; Settings &gt; Strava, which signs you in on Strava's own page. Runtide then uploads a workout when you tap Upload to Strava on its screen, and, if you turn on "Upload New Runs", each run that ends after you turned it on, once Runtide has read it. For each workout it uploads, Runtide sends its route, times, distance, heart rate, cadence, power and laps, as a file Strava turns into an activity on your account. Before each upload it asks Strava for the start and length of your activities that day, private ones included, so a workout already on Strava isn't uploaded twice; it keeps nothing from that list but the matching activity's link. This goes from your iPhone straight to Strava; we don't receive it. Strava's own <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener">privacy policy</a> covers it from then on. The access Strava gives Runtide is kept in this iPhone's Keychain, never in iCloud or backups. Disconnecting in Settings, or Delete Runtide Data, removes Runtide's access on Strava; what was uploaded stays on Strava until you delete it there.</p>
+  <p>Open-Meteo, Strava, Apple and, if you email us, our email provider (Google) handle information under their own terms, and may do so outside your country.</p>
 </section>
 
 <section id="receive">
@@ -157,7 +159,7 @@
 <section id="apple">
   <h2>6. Apple Watch, notifications and writing to Health</h2>
   <p>If you turn on Upcoming Workouts (Runtide &gt; Settings &gt; Apple Watch), Runtide puts your planned runs for the next 7 days in the Workout app on your watch, through Apple's WorkoutKit. This happens between your own devices.</p>
-  <p>If you allow notifications, Runtide sends one local notification after a run: that your race result is ready to look at, that the run wasn't what the plan had, or that the run is ready to review. They're made on your iPhone; there's no push service and nothing about them leaves the phone. They never show anything about the run itself (no pace, heart rate or distance), so nothing about your health appears on the Lock Screen. There are no reminders. Turn them off in Runtide &gt; Settings &gt; Notifications or in the Settings app &gt; Notifications &gt; Runtide.</p>
+  <p>If you allow notifications, Runtide sends one local notification after a run: that your race result is ready to look at, that the run wasn't what the plan had, or that the run is ready to review. They're made on your iPhone; there's no push service and nothing about them leaves the phone. They never show anything about the run itself (no pace, heart rate or distance), so nothing about your health appears on the Lock Screen. If you allow notifications, Runtide also reminds you of a planned session on its morning, at a time you choose: the session's name, distance and target pace from your plan and, with the weather lookup on, the forecast already fetched for where you run. These reminders are scheduled on your iPhone and nothing about them leaves it. Turn them off in Runtide &gt; Settings &gt; Notifications or in the Settings app &gt; Notifications &gt; Runtide.</p>
   <p>Runtide saves to Health only when you ask it to merge two workouts into one. The merged workout keeps their route, heart rate, distance and other samples.</p>
 </section>
 
@@ -184,7 +186,7 @@
   <h2>9. Our legal bases</h2>
   <p>If you are in the EU, EEA or UK, these are the legal bases for processing your personal information:</p>
   <ul>
-    <li><strong>Consent</strong>, including explicit consent for health data: Runtide reading Apple Health once you allow it, the weather lookup, and a report about a run, which you choose to send each time. Change the permissions or turn the lookup off at any time. Withdrawing consent doesn't affect what happened before it.</li>
+    <li><strong>Consent</strong>, including explicit consent for health data: Runtide reading Apple Health once you allow it, the weather lookup, uploads to Strava once you connect it, and a report about a run, which you choose to send each time. Change the permissions, turn the lookup off or disconnect Strava at any time. Withdrawing consent doesn't affect what happened before it.</li>
     <li><strong>Legitimate interests:</strong> answering your messages, and fixing and improving Runtide from reports you or Apple send us.</li>
     <li><strong>Legal obligations:</strong> where the law requires us to keep or disclose information.</li>
     <li><strong>Vital interests:</strong> in the rare case it's needed to protect someone's life.</li>
@@ -200,7 +202,7 @@
 
 <section id="delete">
   <h2>11. Deleting your data</h2>
-  <p>In Runtide, Settings &gt; Delete Runtide Data deletes everything it stored on your iPhone (plans, training history, feedback, settings, weather results and crash reports) and removes its upcoming workouts from your Apple Watch and its notifications; Apple Health stops waking it until you set it up again. It also removes your settings and plan setups from iCloud, and those plans from your other iPhones. A backup file you saved stays where you saved it; delete it there.</p>
+  <p>In Runtide, Settings &gt; Delete Runtide Data deletes everything it stored on your iPhone (plans, training history, feedback, settings, weather results and crash reports), removes its upcoming workouts from your Apple Watch and its notifications, and removes its access to your Strava account (runs already uploaded stay on Strava until you delete them there); Apple Health stops waking it until you set it up again. It also removes your settings and plan setups from iCloud, and those plans from your other iPhones. A backup file you saved stays where you saved it; delete it there.</p>
   <p>Deleting Runtide from your iPhone also removes everything it stored on the phone, but not what it keeps in your iCloud: your settings and plan setups stay there and come back if you install Runtide again. To remove them from iCloud, use Delete Runtide Data (before deleting the app, or after installing it again). Turning iCloud off for Runtide (Settings &gt; [your name] &gt; iCloud) stops the sync but doesn't delete what's already in iCloud.</p>
   <p>Your Health data stays in Health, where you manage it yourself; Runtide only saved to it the workouts you merged.</p>
   <p>To have us delete what you've sent us, email us (section 17).</p>
@@ -221,13 +223,13 @@
 <section id="us">
   <h2>13. United States residents</h2>
   <p>Some US states give you the right to know what personal information a business holds about you, to access, correct and delete it, to get a copy, and to opt out of its sale, targeted advertising and certain profiling. You can use these rights by emailing us (section 17), or through someone you've authorised. If we refuse a request, you can appeal by replying to us. We won't treat you differently for using them.</p>
-  <p>We do not sell personal information or share it for targeted advertising, and we have not done so in the past 12 months. Precise location stays on your iPhone and we don't receive it. Health information stays there too, unless you choose to send us a report about a run. The categories we may receive are in section 5: identifiers (your email address), the health information in a run report, and what you send us. The approximate location in section 4 goes to Open-Meteo for the weather you asked for, and only when the lookup is on.</p>
+  <p>We do not sell personal information or share it for targeted advertising, and we have not done so in the past 12 months. We don't receive precise location: it stays on your iPhone, unless you connect Strava, when the routes of the runs you upload go to your Strava account. Health information stays there too, unless you choose to send us a report about a run. The categories we may receive are in section 5: identifiers (your email address), the health information in a run report, and what you send us. The approximate location in section 4 goes to Open-Meteo for the weather you asked for, and only when the lookup is on.</p>
   <p>Runtide doesn't respond to Do-Not-Track signals, because it doesn't track you and no standard for them has been finalised.</p>
 </section>
 
 <section id="security">
   <h2>14. Security</h2>
-  <p>Runtide's files on your iPhone use iOS file protection, tied to your passcode, and requests to Open-Meteo use HTTPS. We take reasonable technical and organisational steps to protect what we hold. No transmission or storage can be guaranteed to be 100% secure, so keep your iPhone's passcode and any backup file safe.</p>
+  <p>Runtide's files on your iPhone use iOS file protection, tied to your passcode, requests to Open-Meteo and Strava use HTTPS, and Runtide's access to Strava is kept in the iPhone's Keychain. We take reasonable technical and organisational steps to protect what we hold. No transmission or storage can be guaranteed to be 100% secure, so keep your iPhone's passcode and any backup file safe.</p>
 </section>
 
 <section id="children">
