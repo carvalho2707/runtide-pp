@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Back to Runtide</title>
+<style>
+  :root { --blue: #2457B0; --text: #1d1d1f; --muted: #555; --bg: #fff; }
+  @media (prefers-color-scheme: dark) { :root { --blue: #6f9cf0; --text: #f2f2f4; --muted: #b4b6bc; --bg: #121316; } }
+  body { margin: 0; background: var(--bg); color: var(--text); display: grid; place-items: center; min-height: 100vh;
+         font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; text-align: center; }
+  main { padding: 24px; max-width: 420px; }
+  p { color: var(--muted); }
+  a { color: var(--blue); font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Back to Runtide</h1>
+  <p>Garmin Connect is handing the connection back to the app.</p>
+  <p><a id="open" href="runtide://localhost/garmin">Open Runtide</a></p>
+</main>
+<script>
+  // Garmin redirects here with ?code=…&state=… (or ?error=…); the app's sign-in sheet
+  // only catches its own scheme, so the same query goes on to runtide://localhost/garmin.
+  var target = "runtide://localhost/garmin" + window.location.search;
+  document.getElementById("open").href = target;
+  window.location.replace(target);
+</script>
+</body>
+</html>
